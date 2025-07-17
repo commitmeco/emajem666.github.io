@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Your Brain. - Commit Me Co / CMCD</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Tailwind Colors - Defined as CSS variables for easy use */
+        :root {
+            --color-hot-punk-pink: #ff1d89;
+            --color-jet-black: #000000;
+            --color-glitchy-violet: #a485ff;
+            --color-cyber-grit-gray: #6f6f6f;
+
+            --color-deep-navy: #1f2353;
+            --color-behavioral-violet: #a753ab;
+            --color-data-purple: #5919c0;
+            --color-white: #ffffff;
+        }
+
+        /* Utility classes using custom CSS variables */
+        .bg-hot-punk-pink { background-color: var(--color-hot-punk-pink); }
+        .text-hot-punk-pink { color: var(--color-hot-punk-pink); }
+        .bg-jet-black { background-color: var(--color-jet-black); }
+        .text-jet-black { color: var(--color-jet-black); }
+        .bg-glitchy-violet { background-color: var(--color-glitchy-violet); }
+        .text-glitchy-violet { color: var(--color-glitchy-violet); }
+        .bg-cyber-grit-gray { background-color: var(--color-cyber-grit-gray); }
+        .text-cyber-grit-gray { color: var(--color-cyber-grit-gray); }
+
+        .bg-deep-navy { background-color: var(--color-deep-navy); }
+        .text-deep-navy { color: var(--color-deep-navy); }
+        .bg-behavioral-violet { background-color: var(--color-behavioral-violet); }
+        .text-behavioral-violet { color: var(--color-behavioral-violet); }
+        .bg-data-purple { background-color: var(--color-data-purple); }
+        .text-data-purple { color: var(--color-data-purple); }
+        .bg-white { background-color: var(--color-white); }
+        .text-white { color: var(--color-white); }
+
+        /* Font: Inter - Loaded via JavaScript for better control */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Base styles for the split layout sections */
+        .split-section {
+            cursor: pointer;
+        }
+
+        /* Ensure images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Custom styles for the CTA buttons (using CSS variables for colors) */
+        .cta-button {
+            padding: 1rem 2rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 700; /* Bold */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px); /* Lift button slightly on hover */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+        }
+
+        .commitme-cta {
+            background-color: var(--color-hot-punk-pink);
+            color: var(--color-jet-black);
+            border: 2px solid var(--color-jet-black);
+        }
+        .commitme-cta:hover {
+            background-color: var(--color-jet-black);
+            color: var(--color-hot-punk-pink);
+            border-color: var(--color-hot-punk-pink);
+        }
+
+        .cmcd-cta {
+            background-color: var(--color-data-purple);
+            color: var(--color-white);
+            border: 2px solid var(--color-deep-navy);
+        }
+        .cmcd-cta:hover {
+            background-color: var(--color-deep-navy);
+            color: var(--color-data-purple);
+            border-color: var(--color-data-purple);
+        }
+
+        /* Mobile CTA buttons - specific styling */
+        .mobile-cta-button {
+            transition: all 0.3s ease;
+        }
+        .mobile-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body class="bg-jet-black text-white min-h-screen">
+
+    <!-- Hero Header Section -->
+    <header class="bg-gradient-to-r from-jet-black via-deep-navy to-jet-black py-16 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 text-white drop-shadow-lg leading-tight">Pick Your Brain.</h1>
+            <p class="text-base sm:text-lg md:text-2xl text-white max-w-2xl mx-auto leading-relaxed">
+                One brand. Two brainwaves. <br>
+                Choose the tech that fits your mission — backend brains or frontend behavior.
+            </p>
+        </div>
+    </header>
+
+    <main class="relative w-full flex flex-col md:flex-row min-h-screen">
+
+        <!-- Left Side: Commit Me Co - Desktop Split Layout -->
+        <a href="https://www.commitme.co" target="_blank" rel="noopener noreferrer"
+           class="commitme-side split-section relative w-full md:w-1/2 bg-jet-black flex items-center justify-center p-8 text-center
+                  md:hover:w-[60%] md:hover:z-10 md:flex hidden transition-all duration-500 ease-in-out group min-h-[600px]"
+           aria-label="Enter Commit Me Co website">
+            <!-- Overlay for hover effect -->
+            <div class="absolute inset-0 bg-hot-punk-pink opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full">
+                <!-- Logo -->
+                <img src="images/commitmeco-logo.png" alt="Commit Me Co Logo" class="mb-6 rounded-lg shadow-lg max-h-24 object-contain">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-hot-punk-pink">Smart Systems for Chaotic Humans.</h2>
+                <p class="text-lg md:text-xl text-glitchy-violet mb-8">Fix your stack without selling your soul.</p>
+
+                <!-- Supporting Copy - Appears on hover -->
+                <div class="absolute bottom-8 left-0 right-0 px-8 text-glitchy-violet opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-base md:text-lg">
+                    <p>Dive into robust backend solutions, seamless automations, and cutting-edge AI tools designed to streamline your operations and bring order to chaos.</p>
+                </div>
+
+                <button class="cta-button commitme-cta mt-4">
+                    → Enter Commit Me Co
+                </button>
+            </div>
+        </a>
+
+        <!-- Right Side: CMCD - Desktop Split Layout -->
+        <a href="https://www.commitmeco.design" target="_blank" rel="noopener noreferrer"
+           class="cmcd-side split-section relative w-full md:w-1/2 bg-deep-navy flex items-center justify-center p-8 text-center
+                  md:hover:w-[60%] md:hover:z-10 md:flex hidden transition-all duration-500 ease-in-out group min-h-[600px]"
+           aria-label="Enter CMCD website">
+            <!-- Overlay for hover effect -->
+            <div class="absolute inset-0 bg-gradient-to-br from-behavioral-violet to-data-purple opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full">
+                <!-- Logo -->
+                <img src="images/cmcd-logo.png" alt="CMCD Logo" class="mb-6 rounded-lg shadow-lg max-h-24 object-contain">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-data-purple">Design that Thinks Like a Human.</h2>
+                <p class="text-lg md:text-xl text-behavioral-violet mb-8">Data that Works Like a Brain.</p>
+
+                <!-- Supporting Copy - Appears on hover -->
+                <div class="absolute bottom-8 left-0 right-0 px-8 text-behavioral-violet opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-base md:text-lg">
+                    <p>Explore UX strategy powered by AI, behavioral science, and clean execution to craft interfaces that resonate deeply with human cognition.</p>
+                </div>
+
+                <button class="cta-button cmcd-cta mt-4">
+                    → Enter CMCD
+                </button>
+            </div>
+        </a>
+
+        <!-- Mobile Stacked Layout (Visible only on mobile) -->
+        <div class="md:hidden flex flex-col items-center justify-center w-full p-6 text-center bg-jet-black space-y-8 min-h-screen">
+            <div class="space-y-6 w-full max-w-sm">
+                <a href="https://www.commitme.co" target="_blank" rel="noopener noreferrer"
+                   class="mobile-cta-button w-full block bg-hot-punk-pink text-jet-black py-4 px-6 rounded-full text-xl font-bold uppercase shadow-lg hover:bg-glitchy-violet hover:text-white">
+                    Backend, automations, AI tools → Commit Me Co
+                </a>
+                <a href="https://www.commitmeco.design" target="_blank" rel="noopener noreferrer"
+                   class="mobile-cta-button w-full block bg-data-purple text-white py-4 px-6 rounded-full text-xl font-bold uppercase shadow-lg hover:bg-behavioral-violet">
+                    UX strategy, AI-driven design → CMCD
+                </a>
+            </div>
+        </div>
+
+        <!-- Central Divider (Desktop Only) -->
+        <div class="hidden md:flex absolute inset-y-0 left-1/2 transform -translate-x-1/2 w-2 bg-gradient-to-b from-glitchy-violet to-data-purple z-30 rounded-full"></div>
+
+    </main>
+
+    <script>
+        // Add Inter font to the document dynamically
+        const link = document.createElement('link');
+        link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    </script>
+</body>
+</html>
